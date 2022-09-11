@@ -1,9 +1,13 @@
 class DevConfig:
-    pass
+    @staticmethod
+    def init_app(app):
+        app.config['ENV']='development'
 
 
 class ProdConfig:
-    pass
+    @staticmethod
+    def init_app( app):
+        pass
 
 
-configs = {'DEV': DevConfig, 'PROD': ProdConfig}
+configs = {'DEV': DevConfig, 'PROD': ProdConfig,'testing':DevConfig}
